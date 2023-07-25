@@ -1,0 +1,114 @@
+
+public class FoodTest {
+	public static void main(String[] args) {
+		
+		GulabJamun gbj = new GulabJamun();
+		gbj.taste();
+		gbj.sugarQuantity();
+		
+		Spicy noodles = new Noodles();
+		noodles.spiceLevel();
+		noodles.taste();
+		
+//		noodles.instantFood();//Error
+		
+		
+	}
+}
+
+
+interface Food{
+	void taste();
+}
+
+
+abstract class Spicy implements Food
+{
+	abstract void spiceLevel();
+}
+
+class PaniPuri extends Spicy{
+
+	@Override
+	public void taste() {
+		// TODO Auto-generated method stub
+		System.out.println("PaniPuri is spicy in taste.");
+	}
+
+	@Override
+	void spiceLevel() {
+		// TODO Auto-generated method stub
+		System.out.println("Panipuri is less spicy.");
+	}
+	
+	void timeRequired() {
+		System.out.println("PaniPuri takes more time to prepare.");
+	}
+}
+
+class Noodles extends Spicy{
+
+	@Override
+	public void taste() {
+		// TODO Auto-generated method stub
+		System.out.println("Noodles is spicy in taste.");
+	}
+	
+	void spiceLevel() {
+		// TODO Auto-generated method stub
+		System.out.println("Noodles is more spicy.");
+	}
+	
+	void instantFood() {
+		System.out.println("Noodles can prepared instantly.");
+	}
+	
+}
+
+abstract class Sweets implements Food
+{
+	abstract void sugarQuantity();
+}
+
+class GulabJamun extends Sweets{
+
+	@Override
+	public void taste() {
+		// TODO Auto-generated method stub
+		System.out.println("Gulab Jamun are sweet.");
+	}
+
+	@Override
+	void sugarQuantity() {
+		// TODO Auto-generated method stub
+		System.out.println("It has more sugar.");
+	}	
+	
+}
+
+class KajuKatli extends Sweets{
+
+	@Override
+	public void taste() {
+		// TODO Auto-generated method stub
+		System.out.println("KajuKatli is sweet in taste.");
+	}	
+	@Override
+	void sugarQuantity() {
+		// TODO Auto-generated method stub
+		System.out.println("It has less sugar.");
+	}	
+	
+}
+
+
+abstract class Salty implements Food
+{
+
+}
+
+
+
+
+
+
