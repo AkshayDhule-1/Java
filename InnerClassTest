@@ -1,0 +1,32 @@
+
+public class InnerClassTest {
+	public static void main(String[] args) {
+		
+	}
+}
+
+
+
+class Tree{
+	Bird bird = new Bird();//hasA
+	
+	Nest nest = new Nest();
+	
+	class Nest {//Inner Class
+		void layEggs() {
+			System.out.println("Laying eggs ... in the nest...");
+		}
+		
+	}
+}
+
+class Bird{
+	void fly() {
+		System.out.println("Bird is flying.");
+	}
+	
+	void activity(Tree tree) {
+		tree.nest.layEggs();
+	}
+	
+}
