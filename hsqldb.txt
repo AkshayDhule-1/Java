@@ -1,3 +1,5 @@
+/----------------  INSTRUCTION FOR MAC M1 IS GIVEN BELOW --- -- -- - ------
+
 1. hsqldb.org
 	download the db 2.6.1
 2. extract the zip
@@ -31,3 +33,35 @@ TO START THE HSQLDB SERVER ->
 		and execute it
 
 8. explore the other commands by right clicking on the table name
+
+
+
+/////////////////////////////////////////-----FOR MAC M1  -----//////////////=========////////
+
+	hsqldb for mac m1 goto official page
+1.  For MAC M1 download : https://sourceforge.net/projects/hsqldb/files/
+
+2. And goto folder hsqldb/lib/ using terminal 
+then  TO START THE HSQLDB SERVER type below command on terminal at location lib inside hsqldb folder-> 
+		java -cp hsqldb.jar org.hsqldb.server.Server --database.0 file:mydb --dbname.0 xdb
+
+3. after this open new terminal at same location hsqldb/lib and type in terminal below command:
+	java -jar hsqldb.jar
+4. once the interface appread, select the TYPE : engine server
+	URL : jdbc:hsqldb:hsql://localhost/xdb
+	
+	xdb as the database name at the end of the URL
+
+5. try any table creation process
+
+		create table mydept120
+		(
+			deptno int,
+			deptname varchar(20),
+			loc varchar(20)
+		)
+
+		select above create table command paragraph
+		and execute it
+
+6. explore the other commands by right clicking on the table name
